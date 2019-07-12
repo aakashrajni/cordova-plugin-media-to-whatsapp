@@ -7,7 +7,7 @@ package com.aakash.cordova.plugin.video.to.whatsapp;
  import org.apache.cordova.CordovaPlugin;
  import org.json.JSONArray;
  import org.json.JSONException;
-
+ import android.net.Uri;
  import java.util.ArrayList;
 
  public class VideoToWhatsapp extends CordovaPlugin {
@@ -16,17 +16,17 @@ package com.aakash.cordova.plugin.video.to.whatsapp;
          try {
              if (action.equals("shareVideo")) {
                 String url = args.getString(0);
-                String package = args.getString(1);
+                String package_name = args.getString(1);
                 // Intent sendIntent = new Intent();
                 // sendIntent.setAction(Intent.ACTION_SEND);
                 // sendIntent.putExtra(Intent.EXTRA_TEXT,sharetext);
                 // sendIntent.setType(item);
                 // cordova.startActivityForResult(this,sendIntent,1);
-                Uri uri = url;
+                Uri uri = Uri.parse(url);
                 Intent videoshare = new Intent(Intent.ACTION_SEND);
                 videoshare.setType("*/*");
                 //"com.whatsapp"
-                videoshare.setPackage(package);
+                videoshare.setPackage(package_name);
                 videoshare.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
                 videoshare.putExtra(Intent.EXTRA_STREAM,uri);
                 cordova.startActivityForResult(this,videoshare,1);
