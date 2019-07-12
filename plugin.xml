@@ -3,9 +3,10 @@
     <name>VideoToWhatsapp</name>
     <description>It downloads video from url and share to whatsapp</description>
     <repo>https://github.com/aakashrajni/cordova-plugin-video-to-whatsapp</repo>
+    <author>Aakash</author>
     <license>Apache 2.0</license>
     <keywords>cordova,Intent,video,whatsapp,tiktok,url</keywords>
-    <js-module src="www/js/VideoToShare.js" name="VideoToWhatsapp">
+    <js-module src="www/js/VideoToWhatsapp.js" name="VideoToWhatsapp">
         <clobbers target="cordova.plugin.video.to.whatsapp" />
     </js-module>
     <platform name="android">
