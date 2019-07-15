@@ -19,15 +19,18 @@ package com.aakash.cordova.plugin.video.to.whatsapp;
                 String text = args.getString(1);
                 String package_name = args.getString(2);
                 Uri uri = Uri.parse(url);
-                Intent videoshare = new Intent(Intent.ACTION_SEND);
-                videoshare.setType("*/*");
+                Intent videoshare = new Intent(Intent.ACTION_SEND);        
                 //"com.whatsapp"
                 videoshare.setPackage(package_name);
                 videoshare.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
                 videoshare.putExtra(Intent.EXTRA_TEXT,text);
-                videoshare.putExtra(Intent.EXTRA_STREAM,uri);
+                if(url != "" && url != "undefined" && url != "null"){
+                    videoshare.setType("*/*");
+                    videoshare.putExtra(Intent.EXTRA_STREAM,uri);
+                }else{
+                    videoshare.setType("text/plain");
+                }    
                 cordova.startActivityForResult(this,videoshare,1);
-
                 callbackContext.success();
                 return true;
              }
