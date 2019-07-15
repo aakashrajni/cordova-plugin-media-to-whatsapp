@@ -22,9 +22,9 @@ package com.aakash.cordova.plugin.video.to.whatsapp;
                 Intent videoshare = new Intent(Intent.ACTION_SEND);        
                 //"com.whatsapp"
                 videoshare.setPackage(package_name);
-                videoshare.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
                 videoshare.putExtra(Intent.EXTRA_TEXT,text);
                 if(url != "" && url != "undefined" && url != "null"){
+                    videoshare.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
                     videoshare.setType("*/*");
                     videoshare.putExtra(Intent.EXTRA_STREAM,uri);
                 }else{
