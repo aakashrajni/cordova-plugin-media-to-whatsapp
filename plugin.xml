@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-video-to-whatsapp" version="1.0.2">
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-video-to-whatsapp" version="1.0.3">
     <name>VideoToWhatsapp</name>
     <description>It downloads video from url and share to whatsapp</description>
     <repo>https://github.com/aakashrajni/cordova-plugin-video-to-whatsapp</repo>
