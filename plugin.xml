@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-media-to-whatsapp" version="1.1.0">
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-media-to-whatsapp" version="1.1.1">
     <name>MediaToWhatsapp</name>
     <description>It gets media from device storage location and share to whatsapp</description>
     <repo>https://github.com/aakashrajni/cordova-plugin-media-to-whatsapp</repo>

@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-media-to-whatsapp",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "It gets media from device storage location and share to whatsapp",
   "cordova": {
     "id": "cordova-plugin-media-to-whatsapp",
