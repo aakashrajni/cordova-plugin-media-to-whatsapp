@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-video-to-whatsapp" version="1.0.5">
-    <name>VideoToWhatsapp</name>
-    <description>It downloads video from url and share to whatsapp</description>
-    <repo>https://github.com/aakashrajni/cordova-plugin-video-to-whatsapp</repo>
-    <author>Aakash</author>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-media-to-whatsapp" version="1.1.0">
+    <name>MediaToWhatsapp</name>
+    <description>It gets media from device storage location and share to whatsapp</description>
+    <repo>https://github.com/aakashrajni/cordova-plugin-media-to-whatsapp</repo>
+    <author>AakashRajni</author>
     <license>Apache 2.0</license>
-    <keywords>cordova,Intent,video,whatsapp,tiktok,url</keywords>
-    <js-module src="www/js/VideoToWhatsapp.js" name="VideoToWhatsapp">
-        <clobbers target="cordova.plugin.video.to.whatsapp" />
+    <keywords>cordova,Intent,media,image,video,whatsapp,tiktok,url</keywords>
+    <js-module src="www/js/MediaToWhatsapp.js" name="MediaToWhatsapp">
+        <clobbers target="cordova.plugin.media.to.whatsapp" />
     </js-module>
     <platform name="android">
         <config-file target="config.xml" parent="/*">
-            <feature name="VideoToWhatsapp">
-                <param name="android-package" value="com.aakash.cordova.plugin.video.to.whatsapp.VideoToWhatsapp"/>
+            <feature name="MediaToWhatsapp">
+                <param name="android-package" value="com.aakash.cordova.plugin.media.to.whatsapp.MediaToWhatsapp"/>
             </feature>
         </config-file>
-        <source-file src="src/android/com/aakash/cordova/plugin/video/to/whatsapp/VideoToWhatsapp.java" target-dir="src/com/aakash/cordova/plugin/video/to/whatsapp"/>
+        <source-file src="src/android/com/aakash/cordova/plugin/media/to/whatsapp/MediaToWhatsapp.java" target-dir="src/com/aakash/cordova/plugin/media/to/whatsapp"/>
     </platform>
 </plugin>

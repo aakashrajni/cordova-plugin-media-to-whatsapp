@@ -1,31 +1,31 @@
 {
-  "name": "cordova-plugin-video-to-whatsapp",
-  "version": "1.0.5",
-  "description": "It downloads video from url and share to whatsapp",
+  "name": "cordova-plugin-media-to-whatsapp",
+  "version": "1.1.0",
+  "description": "It gets media from device storage location and share to whatsapp",
   "cordova": {
-    "id": "cordova-plugin-video-to-whatsapp",
+    "id": "cordova-plugin-media-to-whatsapp",
     "platforms": [
       "android"
     ]
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aakashrajni/cordova-plugin-video-to-whatsapp.git"
+    "url": "git+https://github.com/aakashrajni/cordova-plugin-media-to-whatsapp.git"
   },
   "keywords": [
     "cordova",
     "Intent",
-    "video",
+    "media",
     "whatsapp",
     "tiktok",
     "url",
     "ecosystem:cordova",
     "cordova-android"
   ],
-  "author": "aakash",
+  "author": "AakashRajni",
   "license": "Apache 2.0",
   "bugs": {
-    "url": "https://github.com/aakashrajni/cordova-plugin-video-to-whatsapp/issues"
+    "url": "https://github.com/aakashrajni/cordova-plugin-media-to-whatsapp/issues"
   },
-  "homepage": "https://github.com/aakashrajni/cordova-plugin-video-to-whatsapp#readme"
+  "homepage": "https://github.com/aakashrajni/cordova-plugin-media-to-whatsapp#readme"
 }

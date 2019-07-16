@@ -1,4 +1,4 @@
-package com.aakash.cordova.plugin.video.to.whatsapp;
+package com.aakash.cordova.plugin.media.to.whatsapp;
 
  import android.content.Context;
  import android.content.Intent;
@@ -10,27 +10,23 @@ package com.aakash.cordova.plugin.video.to.whatsapp;
  import android.net.Uri;
  import java.util.ArrayList;
 
- public class VideoToWhatsapp extends CordovaPlugin {
+ public class MediaToWhatsapp extends CordovaPlugin {
      
      public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
          try {
-             if (action.equals("shareVideo")) {
+             if (action.equals("shareMedia")) {
                 String url = args.getString(0);
                 String text = args.getString(1);
                 String package_name = args.getString(2);
                 Uri uri = Uri.parse(url);
-                Intent videoshare = new Intent(Intent.ACTION_SEND);        
+                Intent mediashare = new Intent(Intent.ACTION_SEND);        
                 //"com.whatsapp"
-                videoshare.setPackage(package_name);
-                videoshare.putExtra(Intent.EXTRA_TEXT,text);
-                if(url != "" && url != "undefined" && url != "null"){
-                    videoshare.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-                    videoshare.setType("*/*");
-                    videoshare.putExtra(Intent.EXTRA_STREAM,uri);
-                }else{
-                    videoshare.setType("text/plain");
-                }    
-                cordova.startActivityForResult(this,videoshare,1);
+                mediashare.setPackage(package_name);
+                mediashare.putExtra(Intent.EXTRA_TEXT,text);
+                mediashare.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+                mediashare.setType("*/*");
+                mediashare.putExtra(Intent.EXTRA_STREAM,uri);
+                cordova.startActivityForResult(this,mediashare,1);
                 callbackContext.success();
                 return true;
              }
